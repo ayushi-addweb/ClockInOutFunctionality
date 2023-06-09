@@ -1,6 +1,4 @@
 package Steps;
-
-import Steps.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,8 +16,6 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
-
-import static Steps.Hooks.emailAddress;
 
 public class TimelogSteps {
 
@@ -114,7 +110,6 @@ public class TimelogSteps {
         System.out.println("Added Attendance module Screenshot is captured");
 
         //Search a particular employee
-
         // Get a System date
         DateFormat dateFormat = new SimpleDateFormat("d");
         Date systemDate = new Date();
@@ -144,7 +139,8 @@ public class TimelogSteps {
                 Thread.sleep(5000);
                 driver.findElement(By.xpath("/html/body/div[4]/div/div/div[1]/button")).click(); //close popup
                 break;
-            } else
+            }
+            else
             {
                 System.out.println("Not Matched");
             }
@@ -169,10 +165,10 @@ public class TimelogSteps {
         System.out.println("User is on HR Module");
 
         //Again move to Attendance module
-        Actions actions_Attendance = new Actions(driver);
+        Actions actionsAttendance = new Actions(driver);
         Thread.sleep(1000);
         WebElement attendanceSubMenuLink1 = driver.findElement(By.linkText("Attendance"));
-        actions_Attendance.moveToElement(attendanceSubMenuLink1).click().perform();
+        actionsAttendance.moveToElement(attendanceSubMenuLink1).click().perform();
         Thread.sleep(1000);
         System.out.println("User is on Attendance Module");
 

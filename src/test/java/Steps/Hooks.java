@@ -1,19 +1,15 @@
 package Steps;
 
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks
 {
-    public static CharSequence emailAddress;
     private WebDriver driver;
 
     @Before(order = 0)
@@ -25,12 +21,11 @@ public class Hooks
         System.setProperty("web-driver.chrome.driver", "/Users/addweb/Downloads/TimeLogWithSS/src/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        //options.addArguments("--headless"); //Headless mode
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.get("https://ttstage.addwebprojects.com/");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[1]/input[1]")).sendKeys("saurabhdhariwal.com@gmail.com"); //niyati@addwebsolution.in, saurabhdhariwal.com@gmail.com
+        driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[1]/input[1]")).sendKeys("niyati@addwebsolution.in"); //niyati@addwebsolution.in, saurabhdhariwal.com@gmail.com
         driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[2]/div[1]/input")).sendKeys("addweb123");
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[2]/button")).click();
