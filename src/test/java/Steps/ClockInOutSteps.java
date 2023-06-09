@@ -106,6 +106,22 @@ public class ClockInOutSteps {
         Thread.sleep(2000);
         System.out.println("Added Attendance module Screenshot is captured");
 
+        //Search ------------------------------------------------------------------------
+        WebDriverWait dropdown = new WebDriverWait(driver, Duration.ofSeconds(100));
+        dropdown.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/button")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/button")).click();
+        Thread.sleep(2000); //----- Click on Employee
+
+        WebDriverWait searchbar = new WebDriverWait(driver, Duration.ofSeconds(100));
+        searchbar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[1]/input")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[1]/input")).sendKeys("Niyati");
+        Thread.sleep(2000); //----- Click on Searchbar and Enter Input
+
+        WebDriverWait employeeName = new WebDriverWait(driver, Duration.ofSeconds(100));
+        employeeName.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[2]/ul/li/a")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[2]/ul/li/a")).click();
+        Thread.sleep(2000); //----- Click on Name of the Person
+
         //Get a System date
         DateFormat dateFormat = new SimpleDateFormat("d");
         Date systemDate = new Date();
@@ -167,6 +183,22 @@ public class ClockInOutSteps {
         actionsAttendance.moveToElement(attendanceSubMenuLink1).click().perform();
         Thread.sleep(1000);
         System.out.println("User is on Attendance Module");
+
+        //Search ------------------------------------------------------------------------
+        WebDriverWait dropdownButton = new WebDriverWait(driver, Duration.ofSeconds(100));
+        dropdownButton.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/button")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/button")).click();
+        Thread.sleep(2000); //----- Click on Employee
+
+        WebDriverWait searchbarMenu = new WebDriverWait(driver, Duration.ofSeconds(100));
+        searchbarMenu.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[1]/input")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[1]/input")).sendKeys("Niyati");
+        Thread.sleep(2000); //----- Click on Searchbar and Enter Input
+
+        WebDriverWait searchEmployeeName = new WebDriverWait(driver, Duration.ofSeconds(100));
+        searchEmployeeName.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[2]/ul/li/a")));
+        driver.findElement(By.xpath("/html/body/div[1]/section/div[2]/form/div/div[1]/div/div/div/div[2]/ul/li/a")).click();
+        Thread.sleep(2000); //----- Click on Name of the Person
 
         //Get a system date
         Thread.sleep(1000);
