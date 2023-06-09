@@ -30,9 +30,8 @@ public class Hooks
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[2]/button")).click();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/header/div[1]/div[1]/div/h2")).getText();
+        //driver.findElement(By.xpath("/html/body/header/div[1]/div[1]/div/h2")).getText();
     }
-
     @After(order = 1)
     public void TearDown() throws InterruptedException
     {
