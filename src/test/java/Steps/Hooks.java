@@ -18,9 +18,10 @@ public class Hooks
         System.out.println("-------------------------");
         System.out.println("Starting Of The Scenario.");
         System.out.println("-------------------------");
-        System.setProperty("web-driver.chrome.driver", "/Users/addweb/Downloads/TimeLogWithSS/src/chromedriver");
+        System.setProperty("web-driver.chrome.driver", "/Users/addweb/IdeaProjects/TickTalk/ClockInOut/src/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+        //options.addArguments("--headless"); // For Headless mode
         driver = new ChromeDriver(options);
         driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.get("https://ttstage.addwebprojects.com/");
@@ -30,7 +31,6 @@ public class Hooks
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/form/section/div/div/div/div/div[2]/button")).click();
         Thread.sleep(1000);
-        //driver.findElement(By.xpath("/html/body/header/div[1]/div[1]/div/h2")).getText();
     }
     @After(order = 1)
     public void TearDown() throws InterruptedException

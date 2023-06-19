@@ -9,5 +9,3 @@ Feature: Clock In and Out Functionality
     And User is going on the Dashboard page
     When User clicks on the Clocked out button
     Then User successfully clock out
-
-
