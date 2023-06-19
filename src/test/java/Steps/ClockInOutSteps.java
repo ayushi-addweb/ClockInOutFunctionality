@@ -42,7 +42,7 @@ public class ClockInOutSteps
         Thread.sleep(1000); //Saving the screenshot in desired location
         File BeforeClockedIn = BeforeClockedInScreenshot.getScreenshotAs(OutputType.FILE);
         Thread.sleep(1000); //Path to the location to save screenshot
-        FileHandler.copy(BeforeClockedIn, new File("/Users/addweb/IdeaProjects/ClockInOut/Screenshot/BeforeClockedIn.png"));
+        FileHandler.copy(BeforeClockedIn, new File("/Users/addweb/IdeaProjects/TickTalk/ClockInOut/Screenshot/BeforeClockedIn.png"));
         Thread.sleep(1000);
         System.out.println("BeforeClockedIn Screenshot is captured");
 
@@ -59,7 +59,7 @@ public class ClockInOutSteps
         Thread.sleep(1000); //Saving the screenshot in desired location
         File AfterClockedInFile = AfterClockedInScreenshot.getScreenshotAs(OutputType.FILE);
         Thread.sleep(3000); //Path to the location to save screenshot
-        FileHandler.copy(AfterClockedInFile, new File("/Users/addweb/IdeaProjects/ClockInOut/ScreenShot/AfterClockedIn.png"));
+        FileHandler.copy(AfterClockedInFile, new File("/Users/addweb/IdeaProjects/TickTalk/ClockInOut/Screenshot/AfterClockedIn.png"));
         Thread.sleep(1000);
         System.out.println("AfterClockedIn Screenshot is captured");
         Thread.sleep(1000);
@@ -91,7 +91,7 @@ public class ClockInOutSteps
         Thread.sleep(2000); //Saving the screenshot in desired location
         File HRModuleFile = HRModuleScreenshot.getScreenshotAs(OutputType.FILE);
         Thread.sleep(2000); //Path to the location to save screenshot
-        FileHandler.copy(HRModuleFile, new File("/Users/addweb/IdeaProjects/ClockInOut/ScreenShot/AddedHRModule.png"));
+        FileHandler.copy(HRModuleFile, new File("/Users/addweb/IdeaProjects/TickTalk/ClockInOut/Screenshot/AddedHRModule.png"));
         Thread.sleep(2000);
         System.out.println("Added HR module Screenshot is captured");
 
@@ -107,7 +107,7 @@ public class ClockInOutSteps
         Thread.sleep(2000); //Saving the screenshot in desired location
         File AttendanceModuleFile = AttendanceModuleScreenshot.getScreenshotAs(OutputType.FILE);
         Thread.sleep(2000); //Path to the location to save screenshot
-        FileHandler.copy(AttendanceModuleFile, new File("/Users/addweb/IdeaProjects/ClockInOut/ScreenShot/AttendanceModule.png"));
+        FileHandler.copy(AttendanceModuleFile, new File("//Users/addweb/IdeaProjects/TickTalk/ClockInOut/Screenshot/AttendanceModule.png"));
         Thread.sleep(2000);
         System.out.println("Added Attendance module Screenshot is captured");
 

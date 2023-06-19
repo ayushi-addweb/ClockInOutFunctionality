@@ -18,7 +18,7 @@ public class Hooks
         System.out.println("-------------------------");
         System.out.println("Starting Of The Scenario.");
         System.out.println("-------------------------");
-        System.setProperty("web-driver.chrome.driver", "/Users/addweb/Downloads/TimeLogWithSS/src/chromedriver");
+        System.setProperty("web-driver.chrome.driver", "/Users/addweb/IdeaProjects/TickTalk/ClockInOut/src/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         //options.addArguments("--headless"); // For Headless mode
