@@ -8,10 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"/Users/addweb/IdeaProjects/ClockInOut/src/test/java/Feature"},
         glue = {"Steps"},
-        plugin = {"html:/Users/addweb/Desktop//Report/ClockInOut.html"}
-)
-
+        plugin = {"html:/Users/addweb/Desktop//Report/ClockInOut.html"})
 public class TestRunner
 {
-
 }
